@@ -13,7 +13,8 @@ Given /^my post has body "([^"]*)"$/ do |body|
 end
 
 Given /^my post has author with name "([^"]*)"$/ do |name|
-  @post[:author] = User.create(:name => name)
+  @post[:author_id] = User.create(:name => name).id
+  @post.save
 end
 
 Given /^my post was published on "([^"]*)"$/ do |date|
