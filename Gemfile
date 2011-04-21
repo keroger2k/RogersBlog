@@ -10,7 +10,7 @@ gem 'rspec-rails'
 gem 'rspec'
 gem 'spork'
 gem 'launchy'
-
+gem 'haml'
 
 
 # gem 'ruby-debug'

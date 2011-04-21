@@ -10,7 +10,7 @@ Feature: Front Page
     And my post has author with name "Kyle Rogers"
     And my post was published on "April 20, 2011"
     When I go to the homepage
-    Then I should see "<h2>My Post</h2>"
+    Then I should see "My Post"
     And I should see "This is my post"
     And I should see "Kyle Rogers"
     And I should see "April 20, 2011"
