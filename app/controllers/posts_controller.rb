@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @post.author_id = current_user.id
+    @post.user_id = current_user.id
   end
   
   def create
