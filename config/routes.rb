@@ -1,4 +1,5 @@
 Blog::Application.routes.draw do
+  #comment for checking
 
   devise_for :users
 
