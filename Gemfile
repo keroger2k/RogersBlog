@@ -5,6 +5,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'haml-rails'
 gem 'devise'
 gem 'jquery-rails'
+gem 'heroku'
+gem 'taps'
 
 group :test do
   gem 'capybara'
@@ -18,6 +20,5 @@ end
 
 group :development do
   gem 'cheat'
-  gem 'heroku'
 end
 
