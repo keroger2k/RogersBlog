@@ -1,0 +1,29 @@
+Feature: Post Management & Display 
+  In order to provide quality content
+  As an Author
+  I need to be able to manage posts
+
+  Scenario: Show Post 
+    Given I have a post
+    And my post has a title "My Post"
+    And my post has body "This is my post."
+    And my post has author with email "kyle.rogers@gmail.com"
+    And my post was published on "April 20, 2011"
+    When I display the post 
+    Then I should see "My Post"
+    And I should see "This is my post"
+    And I should see "kyle.rogers@gmail.com"
+    And I should see "April 20, 2011"
+
+  Scenario: Create Post 
+    Given I have a user with email "kyle.rogers@gmail.com"
+    When I go to the new post page 
+    And I fill in "post[title]" with "My Post Title"
+    And I fill in "post[body]" with "This is my post. Something here."
+    And I select "Kyle Rogers" from "post[author]"
+    And I fill in "post[published_on]" with "April 20, 2011"
+    And I press "Save Post"
+    Then I should see "My Post Title"
+    And I should see "This is my post. Something here."
+    And I should see "kyle.rogers@gmail.com"
+    And I should see "April 20, 2011"

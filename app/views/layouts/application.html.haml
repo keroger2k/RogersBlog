@@ -4,5 +4,20 @@
     %title Blog
     = render :partial => 'layouts/scripts'
   %body
-  = yield 
+    %nav
+      %ul
+        %li
+          #current_user.email
+          
+
+    - unless notice.blank?
+      .success
+        = notice
+    - unless alert.blank?
+      .alert
+        = alert
+
+    #main_content
+      = yield 
+
 
