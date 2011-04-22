@@ -2,7 +2,7 @@ When /^I display the post$/ do
   visit "/posts/#{@post.id}"
 end
 
-Given /^I have a user with email "([^"]*)"$/ do |email|
+Given /^I have an authenticated user with email "([^"]*)"$/ do |email|
   password = "secretpassword"
   Given %{I have one user "#{email}" with password "#{password}"}
   And %{I go to login}

@@ -14,7 +14,7 @@ Feature: Post Management & Display
     And I should see "kyle.rogers@gmail.com"
 
   Scenario: Create Post 
-    Given I have a user with email "kyle.rogers@gmail.com"
+    Given I have an authenticated user with email "kyle.rogers@gmail.com"
     When I go to the new post page 
     And I fill in "post[title]" with "My Post Title"
     And I fill in "post[body]" with "This is my post. Something here."
