@@ -4,11 +4,9 @@
     %title Blog
     = render :partial => 'layouts/scripts'
   %body
-    %nav
-      %ul
-        %li
-          #current_user.email
-          
+    - if current_user
+      = current_user.email
+    - else
 
     - unless notice.blank?
       .success

@@ -13,6 +13,7 @@ Given /^my post has body "([^"]*)"$/ do |body|
 end
 
 Given /^my post has author with email "([^"]*)"$/ do |email|
-  @post.user =  User.create(:email => email)
+  User.new(:email => email, :password => "abcd1234", :password_confirmation => "abcd1234").save!
+  @post.user = User.find_by_email(email)
   @post.save
 end
