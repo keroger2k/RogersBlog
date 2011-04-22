@@ -1,0 +1,7 @@
+%h2=post.title
+%div 
+  %span.author by #{post.user.email}
+  %span.published_on on #{post.created_at.strftime("%B %d, %Y")}
+
+%p.post_body
+  =post.body

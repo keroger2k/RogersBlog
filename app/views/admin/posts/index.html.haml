@@ -1,0 +1,17 @@
+#post_list
+  %table
+    %thead
+      %tr
+        %th Name
+        %th Content
+        %th Created
+        %th Modified
+    %tbody
+      -@posts.each do |post|
+        %tr
+          %td=post.title
+          %td=truncate(post.body, :length => 40)
+          %td=post.created_at.strftime('%b %d, %Y')
+          %td=post.updated_at.strftime('%b %d, %Y')
+
+%div=link_to("create", new_admin_post_path)

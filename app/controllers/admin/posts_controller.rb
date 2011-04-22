@@ -4,10 +4,10 @@ class Admin::PostsController < Admin::AdminController
   before_filter :authenticate_user!
 
   def index
-    @post = Post.all
+    @posts = Post.all
     respond_with(@posts)
   end
-
+  
   def new
     @post.user_id = current_user.id
   end
