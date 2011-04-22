@@ -1,10 +1,1 @@
-%h2=@post.title
-
-.post_meta
-  %span.post_author
-    written by #{@post.user.email}
-  %span.post_date
-    on #{@post.created_at.strftime("%B %d, %Y")}
-
-.post_body
-  =@post.body
+= render :partial =>  'post', :locals => { :post => @post }

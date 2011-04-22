@@ -8,11 +8,10 @@ gem 'devise'
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'cucumber-rails'
-  gem 'cucumber'
   gem 'spork'
   gem 'launchy'
-  gem 'rspec'
+  gem 'factory_girl_rails'
+  gem 'cucumber-rails'
   gem 'rspec-rails'
 end
 

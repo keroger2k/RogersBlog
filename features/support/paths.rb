@@ -12,13 +12,13 @@ module NavigationHelpers
       '/'
 
     when /the new post page/
-      '/posts/new'
+      new_admin_post_path
 
     when /register/
-      '/users/sign_up'
+      new_user_registration_path 
 
     when /login/
-      '/users/sign_in'
+      new_user_session_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

@@ -4,16 +4,11 @@
     %title Blog
     = render :partial => 'layouts/scripts'
   %body
-    - if current_user
-      = current_user.email
-    - else
 
-    - unless notice.blank?
-      .success
-        = notice
-    - unless alert.blank?
-      .alert
-        = alert
+    -if current_user
+      = current_user.email
+    -else
+      - link_to "Sign In", new_user_session_url 
 
     #main_content
       = yield 

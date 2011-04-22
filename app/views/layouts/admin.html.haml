@@ -1,0 +1,18 @@
+!!! 5
+%html
+  %head
+    %title Blog Administration
+    = render :partial => 'layouts/scripts'
+  %body
+    = current_user.email
+
+    - unless notice.blank?
+      .success
+        = notice
+    - unless alert.blank?
+      .alert
+        = alert
+
+    #main_content
+      = yield 
+
