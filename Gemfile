@@ -18,5 +18,6 @@ end
 
 group :development do
   gem 'cheat'
+  gem 'heroku'
 end
 
