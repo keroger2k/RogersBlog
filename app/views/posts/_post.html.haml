@@ -1,6 +1,0 @@
-%h2=link_to(post.title, post_path(post))
-%div 
-  %span.author by #{post.user.email}
-  %span.published_on on #{post.created_at.strftime("%B %d, %Y")}
-  %p.post_body
-    =post.body

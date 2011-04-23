@@ -1,13 +1,18 @@
-= render :partial =>  'post', :locals => { :post => @post }
+%h2=link_to(@post.title, post_path(@post))
+%div 
+  %span.author by #{@post.user.email}
+  %span.published_on on #{@post.created_at.strftime("%B %d, %Y")}
+  %p.post_body
+    =@post.body
 
 #disqus_thread
 :javascript
-	var disqus_shortname = 'kylerogersdevelopmentblog'; 
-	var disqus_identifier = 'unique_dynamic_id_1234';
-	var disqus_url = 'http://example.com/permalink-to-page.html';
-	(function() {
-	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
+  var disqus_shortname = 'kylerogersdevelopmentblog'; 
+  var disqus_identifier = 'post_id_#{@post.id}'
+  var disqus_url = '#{root_url}posts/#{@post.id}';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
 	
