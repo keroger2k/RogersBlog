@@ -1,9 +1,13 @@
-%h2=link_to(@post.title, post_path(@post))
-%div 
-  %span.author by #{@post.user.email}
-  %span.published_on on #{@post.created_at.strftime("%B %d, %Y")}
-  %p.post_body
-    =@post.body
+=content_for :title, "Post: #{@post.title}"
+
+#post
+  #post-header
+    %p.date
+      =@post.created_at.strftime("%B %d, %Y")
+    %h1=@post.title
+  #post-text
+    %p
+      =@post.body
 
 #disqus_thread
 :javascript

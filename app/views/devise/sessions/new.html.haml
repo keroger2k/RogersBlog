@@ -1,0 +1,19 @@
+=content_for :title, "Login"
+
+.box
+
+  %h2 Login
+
+  = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+    %ol
+      %li
+        %span
+          = f.label :email
+          = f.email_field :email, :class => "text"
+      %li
+        %span
+          =f.label :password 
+          =f.password_field :password, :class => "text"
+      %li
+        %span
+          =f.submit "Sign in"
