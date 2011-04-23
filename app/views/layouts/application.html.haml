@@ -7,6 +7,16 @@
     %header
       %h5#logo
         =link_to "Blog Logo", root_url
+      %nav
+        %ul
+          %li
+            =link_to "Blog", root_url
+          %li
+            =link_to "Work", root_url
+          %li 
+            =link_to "About", root_url
+          %li
+            =link_to "Contact", root_url
       %ul.account_links
         %li#login
           -if current_user

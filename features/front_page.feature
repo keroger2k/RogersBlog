@@ -11,4 +11,3 @@ Feature: Front Page
     When I go to the homepage
     Then I should see "My Post"
     And I should see "This is my post"
-    And I should see "kyle.rogers@gmail.com"
