@@ -11,8 +11,3 @@ Given /^my post has body "([^"]*)"$/ do |body|
   @post.body = body 
   @post.save
 end
-
-Given /^my post has author with email "([^"]*)"$/ do |email|
-  @post.user = Factory.create(:user, :email => email)
-  @post.save
-end

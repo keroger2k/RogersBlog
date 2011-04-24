@@ -8,8 +8,24 @@ class Admin::PostsController < Admin::AdminController
     respond_with(@posts)
   end
   
+  def show
+    respond_with(@post)
+  end
+  
   def new
     @post.user_id = current_user.id
+  end
+  
+  def edit
+  
+  end
+
+  def update
+    if @post.update_attributes(params[:post])
+      redirect_to admin_posts_path, :notice => "Updated..." 
+    else
+      render :action => 'edit'
+    end
   end
 
   def create
@@ -20,6 +36,11 @@ class Admin::PostsController < Admin::AdminController
       flash[:alert] = "bummer..."
       render :action => 'new'
     end
+  end
+  
+  def destroy
+    @post.destroy
+    redirect_to admin_posts_url, :notice => "Deleted..."
   end
 
   private

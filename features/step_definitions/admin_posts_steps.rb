@@ -12,3 +12,7 @@ Given /^I have one\s+user "([^\"]*)" with password "([^\"]*)"$/ do |email, passw
        :password => password,
        :password_confirmation => password).save!
 end
+
+When /^I press delete post$/ do
+
+end

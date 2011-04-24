@@ -13,7 +13,7 @@ Feature: Authentication
     And I fill in "user_password" with "<password>"
     And I fill in "user_password_confirmation" with "<password>"
     And I press "Sign up"
-    Then I should see "<email>" 
+    Then I should be on the home page
 
     Examples:
       | email           | password   |
@@ -26,5 +26,5 @@ Feature: Authentication
     And I fill in "user_email" with "kyle.rogers@gmail.com"
     And I fill in "user_password" with "password"
     And I press "Sign in"
-    Then I should see "kyle.rogers@gmail.com"
+    Then I should be on the home page
 

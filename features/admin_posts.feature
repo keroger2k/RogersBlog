@@ -11,4 +11,12 @@ Feature: Post Management
     And I press "Create Post"
     Then I should see "My Post Title"
     And I should see "This is my post. Something here."
-    And I should see "kyle.rogers@gmail.com"
+    
+  Scenario: Delete Post 
+    Given I have an authenticated user with email "kyle.rogers@gmail.com"
+    And I have a post
+    And my post has a title "My Post"
+    And my post has body "This is my post."
+    When I press delete post
+    Then I should not see "My Post Title"
+    And I should not see "This is my post. Something here."

@@ -15,7 +15,7 @@ module NavigationHelpers
       new_admin_post_path
 
     when /register/
-      new_user_registration_path 
+      new_user_registration_path
 
     when /login/
       new_user_session_path
