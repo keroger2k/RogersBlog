@@ -414,7 +414,70 @@ footer a:hover{
 	display: none;
 }
 
+#post_list table th {
+  text-align: left;
+}
 
+#post_list table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-collapse: collapse; 
+  background: #fff;
+}
+
+#post_list table tr td, #post_list table tr th {
+  padding: 8px;
+  vertical-align: top;
+  text-align: left;
+}
+
+#post_list table tr th {
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#AAB8C9), to(#6E84A2), color-stop(.5,#6E84A2));
+  background: -moz-linear-gradient(0% 65% 90deg,#6E84A2, #AAB8C9, #AAB8C9 100%);
+  color: #fff;
+  font-weight: bold;
+}
+
+#post_list table tr td {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.alert,.notice, .success { 
+  padding: .6em; 
+  border: 4px solid #ddd; 
+}
+
+.alert { 
+  background: #FBE3E4; 
+  color: #D12F19; 
+  border-color: #FBC2C4; 
+  cursor:pointer;
+}
+
+.notice { 
+  background: #FFF6BF; 
+  color: #817134; 
+  border-color: #FFD324; 
+}
+
+.success { 
+  background: #E6EFC2; 
+  color: #529214; 
+  border-color: #C6D880; 
+}
+
+.alert a { 
+  color: #D12F19; 
+}
+
+.notice a { 
+  color: #817134; 
+}
+
+.success a { 
+  color: #529214; 
+}
 
 
 

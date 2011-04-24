@@ -7,6 +7,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'heroku'
 gem 'taps'
+gem 'tiny_mce'
 
 group :test do
   gem 'capybara'

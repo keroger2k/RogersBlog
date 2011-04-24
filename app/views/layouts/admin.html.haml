@@ -1,11 +1,11 @@
 !!! 5
 %html
   %head
-    %title Blog Administration
+    %title 
+      =yield(:title)
     = render :partial => 'layouts/scripts'
+    =include_tiny_mce_if_needed
   %body
-    = current_user.email
-
     - unless notice.blank?
       .success
         = notice

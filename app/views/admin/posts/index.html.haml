@@ -1,3 +1,4 @@
+=content_for :title, "Admin::Posts"
 #post_list
   %table
     %thead
@@ -11,11 +12,12 @@
       -@posts.each do |post|
         %tr
           %td
-            %span=link_to 'Edit', edit_admin_post_path(post) | 
+            %span=link_to 'Edit', edit_admin_post_path(post)
+            | 
             %span=link_to 'Delete', [:admin, post], :confirm => 'Are you sure?', :method => :delete
           %td=post.title
           %td=truncate(post.body, :length => 40)
           %td=post.created_at.strftime('%b %d, %Y')
           %td=post.updated_at.strftime('%b %d, %Y')
 
-%div=link_to "Create", new_admin_post_path 
+  %div=link_to "Create", new_admin_post_path 

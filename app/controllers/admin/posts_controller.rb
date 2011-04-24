@@ -2,7 +2,15 @@ class Admin::PostsController < Admin::AdminController
   respond_to :html
   before_filter :get_post, :except => [:index, :create]
   before_filter :authenticate_user!
-
+  uses_tiny_mce :options => {
+                                :theme => 'advanced',
+                                :mode => 'textareas',
+                                :theme_advanced_resizing => true,
+                                :theme_advanced_resize_horizontal => true,
+                                :theme_advanced_toolbar_location => "top",
+                                :theme_advanced_toolbar_align => "left"
+                            },:only => [:new, :edit]
+                              
   def index
     @posts = Post.all
     respond_with(@posts)
