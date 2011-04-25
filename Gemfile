@@ -5,11 +5,12 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'haml-rails'
 gem 'devise'
 gem 'jquery-rails'
-gem 'heroku'
 gem 'taps'
 gem 'tiny_mce'
+gem 'client_side_validations'
 
-group :test do
+group :development, :test do
+  gem 'heroku'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'spork'
@@ -20,6 +21,7 @@ group :test do
 end
 
 group :development do
-  gem 'cheat'
+  gem 'annotate-models'
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 

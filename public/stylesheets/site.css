@@ -443,6 +443,13 @@ footer a:hover{
   border-bottom: 1px solid #eaeaea;
 }
 
+
+/* error messages */
+
+div.field_with_errors .message {
+	color: #d12f19;
+}
+
 .alert,.notice, .success { 
   padding: .6em; 
   border: 4px solid #ddd; 
