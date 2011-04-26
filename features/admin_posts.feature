@@ -29,6 +29,7 @@ Feature: Post Management
     And I have a post
     And my post has a title "My Post"
     And my post has body "This is my post."
+    And I visit the admin posts page
     When I press delete post
     Then I should not see "My Post Title"
     And I should not see "This is my post. Something here."
