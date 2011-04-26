@@ -16,3 +16,8 @@ end
 When /^I press delete post$/ do
 
 end
+
+When /^I edit the post$/ do
+  visit "/admin/posts/#{@post.id}/edit"
+end
+
