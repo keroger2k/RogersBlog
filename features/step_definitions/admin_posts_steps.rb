@@ -13,11 +13,16 @@ Given /^I have one\s+user "([^\"]*)" with password "([^\"]*)"$/ do |email, passw
        :password_confirmation => password).save!
 end
 
-When /^I press delete post$/ do
-
-end
-
 When /^I edit the post$/ do
   visit "/admin/posts/#{@post.id}/edit"
 end
+
+Given /^I visit the admin posts page$/ do
+  visit "/admin/posts"
+end
+
+When /^I delete post$/ do
+ click_link('Delete') 
+end
+
 
