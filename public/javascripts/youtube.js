@@ -8,19 +8,8 @@ pageSize: 10,
             $.getJSON('http://gdata.youtube.com/feeds/users/' + this.username + '/uploads?alt=json&callback=?&start-index=' + this.startIndex + '&max-results=' + youTubeMe.pageSize, youTubeMe.createYouTubePlayers);
           },
 
-play: function(id)
-      {
-        //var html  = '';
-
-        //html += '<object width="560" height="349">';
-        //html += '<param name="movie" value="http://www.youtube.com/v/'+id+'"></param>';
-        //html += '<param name="autoplay" value="1">';
-        //html += '<param name="wmode" value="transparent"></param>';
-        //html += '<embed src="http://www.youtube.com/v/'+id+'&autoplay=0" type="application/x-shockwave-flash" width="560" height="349" wmode="transparent" ></embed>';
-        //html += '</object>';
-
-				var html = '<iframe width="560" height="349" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>'
-
+play: function(id) {
+        var html = '<iframe width="560" height="349" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>'
         return html;
       },
 
@@ -39,9 +28,12 @@ createYouTubePlayers: function(data) {
                         }
 
                         for (var i = 0; i < data.feed.entry.length; i++) {
-                          var html = '<div class=\"video\">';
-                          html += youTubeMe.play(data.feed.entry[i].id.$t.split('/')[5]);
-                          html += '<span class=\"description\">' + data.feed.entry[i].media$group.media$description.$t  + '</span></div>'
+                          var entry = data.feed.entry[i];
+                          var html = '<div class="video">';
+                          html += '<h2 class="title">' + entry.title.$t  + '</h2>';
+                          html += '<div class="published">' + entry.published.$t  + '</div>';
+                          html += youTubeMe.play(entry.id.$t.split('/')[5]);
+                          html += '<span class="description">' + entry.media$group.media$description.$t  + '</span></div>'
                             playerDiv.append(html);
                         }
                       },

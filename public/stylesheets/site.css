@@ -486,6 +486,8 @@ div.field_with_errors .message {
   color: #529214; 
 }
 
+/* Youtube Page */
+
 #player { }
 .video { margin-bottom: 25px; padding-bottom: 10px; border-bottom: 1px solid gray;}
 .description { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;border: 1px solid #C9D5DF; background-color: #F2F6F9; padding: 10px; vertical-align: top; white-space:normal; width: 400px; height: 349; display:inline-block; margin: 10px 0 0 10px;}
@@ -494,4 +496,24 @@ iframe { margin: 0 auto; width: 560px;}
 div.pager { -webkit-box-shadow: 0 1px 5px #666; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background-color: #4E7BA3; border: 1px solid #427EB4;line-height: 2em; text-align: center; margin-bottom: 10px; }
 .pager a#next, .pager a#prev { color: #fff; font-size: 1.8em; margin: 0 15px; }
 .pager a:visited { color: #fff; }
-
+.video .title { 
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  border-radius: 5px; 
+  font-size: 1.5em; 
+  background-color: #f2f6f9; 
+  border: 1px solid #c9d5df;
+  padding: 6px; 
+  margin: 5px 0;
+  font-weight: bold;
+}
+.video .published { 
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  border-radius: 5px; 
+  font-size: .8em; 
+  background-color: #f2f6f9; 
+  border: 1px solid #c9d5df;
+  padding: 5px; 
+  margin: 5px 0; 
+}
