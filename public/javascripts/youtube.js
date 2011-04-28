@@ -5,7 +5,7 @@ pageSize: 10,
           username: 'keroger2k',
 
           init: function() {
-            $.getJSON('http://gdata.youtube.com/feeds/users/' + this.username + '/uploads?alt=json&start-index=' + this.startIndex + '&max-results=' + youTubeMe.pageSize, youTubeMe.createYouTubePlayers);
+            $.getJSON('http://gdata.youtube.com/feeds/users/' + this.username + '/uploads?alt=json&callback=?&start-index=' + this.startIndex + '&max-results=' + youTubeMe.pageSize, youTubeMe.createYouTubePlayers);
           },
 
 play: function(id)
