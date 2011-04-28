@@ -492,6 +492,6 @@ div.field_with_errors .message {
 iframe { margin: 0 auto; width: 560px;}
 .video .description {  } 
 div.pager { -webkit-box-shadow: 0 1px 5px #666; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background-color: #4E7BA3; border: 1px solid #427EB4;line-height: 2em; text-align: center; margin-bottom: 10px; }
-.pager a#next { color: #fff; font-size: 1.8em; margin: 0 15px; }
+.pager a#next, .pager a#prev { color: #fff; font-size: 1.8em; margin: 0 15px; }
 .pager a:visited { color: #fff; }
 
