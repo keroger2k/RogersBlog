@@ -1,7 +1,4 @@
 Feature: Post Management 
-  In order to provide quality content
-  As an Author
-  I need to be able to manage posts
   
   Scenario: Create Post 
     Given I have an authenticated user with email "kyle.rogers@gmail.com"

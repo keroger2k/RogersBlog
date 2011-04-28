@@ -1,10 +1,4 @@
 Feature: Authentication 
-  To ensure user are authenticated correctly
-  As a non-registered user
-  I want to be able to create a new account
-  As a registered user
-  I want to be able to login
-
 
   Scenario Outline: Creating a new account
     Given I am not authenticated

@@ -1,6 +1,4 @@
 Feature: Post Display 
-  In order to display my posts
-  I need to be able to show my posts
 
   Scenario: Show Post 
     Given I have a post

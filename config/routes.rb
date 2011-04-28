@@ -3,7 +3,10 @@ Blog::Application.routes.draw do
   resources :posts
 
   scope '/' do
-    match '/youtube' => "info#youtube", :as => :youtube
+    match '/about'  => 'info#about', :as => :about
+    match '/youtube' => 'info#youtube', :as => :youtube
+    match '/contact' => 'info#contact', :as => :contact
+    match '/photos' => 'info#photos', :as => :photos
   end
 
   devise_scope :user do 
