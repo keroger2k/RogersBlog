@@ -6,4 +6,4 @@ Feature: Post Display
     And my post has body "This is my post."
     When I display the post 
     Then I should see "My Post"
-    And I should see "This is my post"
+    And I should see "This is my post1"

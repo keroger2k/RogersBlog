@@ -18,6 +18,9 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'cucumber-rails'
   gem 'rspec-rails'
+  gem 'autotest-standalone'
+  gem 'autotest-rails'
+  gem 'autotest-growl'
 end
 
 group :development do
