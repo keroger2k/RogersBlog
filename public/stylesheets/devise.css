@@ -1,0 +1,36 @@
+
+/* Login Screen */
+
+.box {
+    background: #F2F6F9;
+	border: 1px solid #C9D5DF;
+    padding: 20px;
+    -webkit-box-shadow: 0 1px 5px rgba(78,123, 163, .22);
+    -moz-box-shadow: 0 1px 5px rgba(78,123, 163, .22);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+	margin: 20px;
+}
+.box ol li label { font-size: .9em;}
+
+.box h2 {
+	margin:0 30px 0 30px;
+}
+.box ol {
+	list-style:none;
+}
+
+.box .text {
+    padding: 7px 6px;
+    border: 1px solid #c6c6c6;
+	-webkit-box-shadow: 0 1px 5px rgba(78,123, 163, .22);
+    -moz-box-shadow: 0 1px 5px rgba(78,123, 163, .22);
+    background-repeat: no-repeat;
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, Calibri, sans-serif;
+}
+
+.box label {
+    display: block;
+}
