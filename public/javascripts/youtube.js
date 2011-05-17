@@ -31,7 +31,7 @@ createYouTubePlayers: function(data) {
                           var entry = data.feed.entry[i];
                           var html = '<div class="video">';
                           html += '<h2 class="title">' + entry.title.$t  + '</h2>';
-                          html += '<div class="published">' + entry.published.$t  + '</div>';
+						  html += '<div class="published">' + new Date(entry.published.$t).toDateString() + '</div>';
                           html += youTubeMe.play(entry.id.$t.split('/')[5]);
                           html += '<span class="description">' + entry.media$group.media$description.$t  + '</span></div>'
                             playerDiv.append(html);
