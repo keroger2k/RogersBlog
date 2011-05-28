@@ -13,6 +13,6 @@
           =link_to(post.title, post_path(post))
         %td.summary
           %p
-            =truncate(post.body, :length => 120)
+            =raw(truncate(post.body, :length => 220))
         %td.info
           Comment Count

@@ -1,6 +1,7 @@
 Blog::Application.routes.draw do
   devise_for :users
   resources :posts
+  resources :flickr
 
   scope '/' do
     match '/about'  => 'info#about', :as => :about

@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'taps'
 gem 'tiny_mce'
 gem 'client_side_validations'
+gem 'flickraw'
 
 group :development, :test do
   gem 'heroku'

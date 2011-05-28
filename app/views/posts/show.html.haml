@@ -7,7 +7,7 @@
     %h1=@post.title
   #post-text
     %p
-      =@post.body
+      =raw(@post.body)
 
 #disqus_thread
 :javascript

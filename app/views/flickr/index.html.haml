@@ -1,0 +1,12 @@
+=content_for :title, "Flickr Photos"
+
+#photos
+  %ul
+  -@list.each do |photo|
+    %li
+      %img{:src => FlickRaw.url(photo)}
+      %img{:src => FlickRaw.url_s(photo)}
+      %img{:src => FlickRaw.url_m(photo)}
+      %img{:src => FlickRaw.url_t(photo)}
+      %img{:src => FlickRaw.url_b(photo)}
+      %img{:src => FlickRaw.url_z(photo)}
