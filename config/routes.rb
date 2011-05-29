@@ -7,7 +7,7 @@ Blog::Application.routes.draw do
     match '/about'  => 'info#about', :as => :about
     match '/youtube' => 'info#youtube', :as => :youtube
     match '/contact' => 'info#contact', :as => :contact
-    match '/photos' => 'info#photos', :as => :photos
+    match '/photos' => 'flickr#index', :as => :photos
   end
 
   devise_scope :user do 
