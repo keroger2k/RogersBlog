@@ -442,3 +442,11 @@ div.pager { -webkit-box-shadow: 0 1px 5px #666; -webkit-border-radius: 5px; -moz
   padding: 5px; 
   margin: 5px 0; 
 }
+
+
+/* flickr photos */
+
+#photos_flickr {
+  padding:5px;
+}
+

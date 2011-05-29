@@ -1,12 +1,9 @@
 =content_for :title, "Flickr Photos"
+=javascript_include_tag 'jquery.lightbox-0.5.min'
+=javascript_include_tag 'flickr'
 
-#photos
-  %ul
+#photos_flickr
   -@list.each do |photo|
-    %li
-      %img{:src => FlickRaw.url(photo)}
-      %img{:src => FlickRaw.url_s(photo)}
-      %img{:src => FlickRaw.url_m(photo)}
-      %img{:src => FlickRaw.url_t(photo)}
-      %img{:src => FlickRaw.url_b(photo)}
-      %img{:src => FlickRaw.url_z(photo)}
+    %span 
+      %a{:href => FlickRaw.url(photo), :title => photo.title}
+        %img{:src => FlickRaw.url_s(photo)}

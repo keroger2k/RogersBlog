@@ -9,6 +9,7 @@ gem 'taps'
 gem 'tiny_mce'
 gem 'client_side_validations'
 gem 'flickraw'
+gem 'youtube_it'
 
 group :development, :test do
   gem 'heroku'
