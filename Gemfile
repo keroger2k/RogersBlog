@@ -10,6 +10,7 @@ gem 'tiny_mce'
 gem 'client_side_validations'
 gem 'flickraw'
 gem 'youtube_it'
+gem 'sass'
 
 group :development, :test do
   gem 'heroku'
